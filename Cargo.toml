@@ -1,0 +1,17 @@
+[package]
+name = "rsx-parser"
+version = "0.1.0"
+authors = ["Victor Porof <victor.porof@gmail.com>"]
+
+[lib]
+name = "rsx_parser"
+
+[dependencies]
+combine = "2.3.2"
+itertools = "0.7.4"
+quote = "0.3.15"
+rand = "0.4.1"
+rsx-shared = { git = "https://github.com/victorporof/rsx-shared.git", default-features = false }
+self-tokenize-macro = { git = "https://github.com/victorporof/rust-self-tokenize.git" }
+self-tokenize-trait = { git = "https://github.com/victorporof/rust-self-tokenize.git" }
+syn = { version = "0.11.11", features = ["full"] }
