@@ -1,0 +1,1 @@
+initSidebarItems({"constant":[["DEFAULT_FONT_DPI",""],["DEFAULT_FONT_SIZE",""]]});

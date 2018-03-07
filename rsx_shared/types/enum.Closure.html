@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Closure` enum in crate `rsx_shared`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Closure">
+
+    <title>rsx_shared::types::Closure - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css" id="themeStyle">
+    <script src="../../storage.js"></script>
+    
+
+    
+    
+</head>
+<body class="rustdoc enum">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        
+        <p class='location'>Enum Closure</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#variants">Variants</a><div class="sidebar-links"><a href="#variant.Headless">Headless</a><a href="#variant.Fn">Fn</a><a href="#variant.FnMut">FnMut</a></div><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.headless">headless</a><a href="#method.new">new</a><a href="#method.new_mut">new_mut</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-From%3C()%3E">From&lt;()&gt;</a><a href="#impl-From%3CHeadlessClosureId%3E">From&lt;HeadlessClosureId&gt;</a><a href="#impl-From%3CT%3E">From&lt;T&gt;</a><a href="#impl-TCallback%3CA%3E">TCallback&lt;A&gt;</a><a href="#impl-Debug">Debug</a><a href="#impl-PartialEq">PartialEq</a><a href="#impl-Clone">Clone</a></div><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">!Send</a><a href="#impl-Sync">!Sync</a></div></div><p class='location'><a href='../index.html'>rsx_shared</a>::<wbr><a href='index.html'>types</a></p><script>window.sidebarCurrent = {name: 'Closure', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../theme.js"></script>
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>rsx_shared</a>::<wbr><a href='index.html'>types</a>::<wbr><a class="enum" href=''>Closure</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#71-75' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum Closure&lt;A&gt; {
+    Headless {
+        f: <a class="type" href="../../rsx_shared/types/type.HeadlessClosureId.html" title="type rsx_shared::types::HeadlessClosureId">HeadlessClosureId</a>,
+    },
+    Fn {
+        f: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/rc/struct.Rc.html" title="struct alloc::rc::Rc">Rc</a>&lt;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(A)&gt;,
+    },
+    FnMut {
+        f: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/rc/struct.Rc.html" title="struct alloc::rc::Rc">Rc</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/core/cell/struct.RefCell.html" title="struct core::cell::RefCell">RefCell</a>&lt;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.FnMut.html" title="trait core::ops::function::FnMut">FnMut</a>(A)&gt;&gt;,
+    },
+}</pre><h2 id='variants' class='variants small-section-header'>
+                   Variants<a href='#variants' class='anchor'></a></h2>
+<span id="variant.Headless" class="variant small-section-header"><a href="#variant.Headless" class="anchor field"></a><span id='Headless.v' class='invisible'><code>Headless</code></span></span><span class='docblock autohide sub-variant' id='variant.Headless.fields'><h3 class='fields'>Fields of <code>Headless</code></h3>
+
+                           <table><tr><td id='variant.Headless.field.f'><span id='Headless.v.f.v' class='invisible'><code>f:&nbsp;<a class="type" href="../../rsx_shared/types/type.HeadlessClosureId.html" title="type rsx_shared::types::HeadlessClosureId">HeadlessClosureId</a></code></span></td><td></td></tr></table></span><span id="variant.Fn" class="variant small-section-header"><a href="#variant.Fn" class="anchor field"></a><span id='Fn.v' class='invisible'><code>Fn</code></span></span><span class='docblock autohide sub-variant' id='variant.Fn.fields'><h3 class='fields'>Fields of <code>Fn</code></h3>
+
+                           <table><tr><td id='variant.Fn.field.f'><span id='Fn.v.f.v' class='invisible'><code>f:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/rc/struct.Rc.html" title="struct alloc::rc::Rc">Rc</a>&lt;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(A)&gt;</code></span></td><td></td></tr></table></span><span id="variant.FnMut" class="variant small-section-header"><a href="#variant.FnMut" class="anchor field"></a><span id='FnMut.v' class='invisible'><code>FnMut</code></span></span><span class='docblock autohide sub-variant' id='variant.FnMut.fields'><h3 class='fields'>Fields of <code>FnMut</code></h3>
+
+                           <table><tr><td id='variant.FnMut.field.f'><span id='FnMut.v.f.v' class='invisible'><code>f:&nbsp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/rc/struct.Rc.html" title="struct alloc::rc::Rc">Rc</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/core/cell/struct.RefCell.html" title="struct core::cell::RefCell">RefCell</a>&lt;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.FnMut.html" title="trait core::ops::function::FnMut">FnMut</a>(A)&gt;&gt;</code></span></td><td></td></tr></table></span>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl&lt;A&gt; <a class="enum" href="../../rsx_shared/types/enum.Closure.html" title="enum rsx_shared::types::Closure">Closure</a>&lt;A&gt;</code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#77-99' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.headless' class="method"><span id='headless.v' class='invisible'><code>pub fn <a href='#method.headless' class='fnname'>headless</a>(f: <a class="type" href="../../rsx_shared/types/type.HeadlessClosureId.html" title="type rsx_shared::types::HeadlessClosureId">HeadlessClosureId</a>) -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#78-80' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.new' class="method"><span id='new.v' class='invisible'><code>pub fn <a href='#method.new' class='fnname'>new</a>&lt;T:&nbsp;'static&gt;(closure: T) -&gt; Self <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(A),&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#82-89' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.new_mut' class="method"><span id='new_mut.v' class='invisible'><code>pub fn <a href='#method.new_mut' class='fnname'>new_mut</a>&lt;T:&nbsp;'static&gt;(closure: T) -&gt; Self <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.FnMut.html" title="trait core::ops::function::FnMut">FnMut</a>(A),&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#91-98' title='goto source code'>[src]</a></span></h4>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+            <div id='implementations-list'>
+        <h3 id='impl-From%3C()%3E' class='impl'><span class='in-band'><code>impl&lt;A&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>&gt; for <a class="enum" href="../../rsx_shared/types/enum.Closure.html" title="enum rsx_shared::types::Closure">Closure</a>&lt;A&gt;</code><a href='#impl-From%3C()%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#101-105' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from' class="method"><span id='from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(_: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>) -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#102-104' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From%3CHeadlessClosureId%3E' class='impl'><span class='in-band'><code>impl&lt;A&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="type" href="../../rsx_shared/types/type.HeadlessClosureId.html" title="type rsx_shared::types::HeadlessClosureId">HeadlessClosureId</a>&gt; for <a class="enum" href="../../rsx_shared/types/enum.Closure.html" title="enum rsx_shared::types::Closure">Closure</a>&lt;A&gt;</code><a href='#impl-From%3CHeadlessClosureId%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#107-111' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-1' class="method"><span id='from.v-1' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(value: <a class="type" href="../../rsx_shared/types/type.HeadlessClosureId.html" title="type rsx_shared::types::HeadlessClosureId">HeadlessClosureId</a>) -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#108-110' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From%3CT%3E' class='impl'><span class='in-band'><code>impl&lt;A, T:&nbsp;'static&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;T&gt; for <a class="enum" href="../../rsx_shared/types/enum.Closure.html" title="enum rsx_shared::types::Closure">Closure</a>&lt;A&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(A),&nbsp;</span></code><a href='#impl-From%3CT%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#113-120' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-2' class="method"><span id='from.v-2' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(value: T) -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#117-119' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From%3CT%3E-1' class='impl'><span class='in-band'><code>impl&lt;A, T:&nbsp;'static&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;T&gt; for <a class="enum" href="../../rsx_shared/types/enum.Closure.html" title="enum rsx_shared::types::Closure">Closure</a>&lt;A&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.FnMut.html" title="trait core::ops::function::FnMut">FnMut</a>(A),&nbsp;</span></code><a href='#impl-From%3CT%3E-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#122-129' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-3' class="method"><span id='from.v-3' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(value: T) -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#126-128' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-TCallback%3CA%3E' class='impl'><span class='in-band'><code>impl&lt;A&gt; <a class="trait" href="../../rsx_shared/traits/trait.TCallback.html" title="trait rsx_shared::traits::TCallback">TCallback</a>&lt;A&gt; for <a class="enum" href="../../rsx_shared/types/enum.Closure.html" title="enum rsx_shared::types::Closure">Closure</a>&lt;A&gt;</code><a href='#impl-TCallback%3CA%3E' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#131-150' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.InvokeOk' class="type"><span id='InvokeOk.t' class='invisible'><code>type <a href='../../rsx_shared/traits/trait.TCallback.html#associatedtype.InvokeOk' class="type">InvokeOk</a> = <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a></code></span></h4>
+<h4 id='associatedtype.InvokeErr' class="type"><span id='InvokeErr.t' class='invisible'><code>type <a href='../../rsx_shared/traits/trait.TCallback.html#associatedtype.InvokeErr' class="type">InvokeErr</a> = A</code></span></h4>
+<h4 id='method.call' class="method"><span id='call.v' class='invisible'><code>fn <a href='../../rsx_shared/traits/trait.TCallback.html#tymethod.call' class='fnname'>call</a>(&amp;self, args: A) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self::<a class="type" href="../../rsx_shared/traits/trait.TCallback.html#associatedtype.InvokeOk" title="type rsx_shared::traits::TCallback::InvokeOk">InvokeOk</a>, Self::<a class="type" href="../../rsx_shared/traits/trait.TCallback.html#associatedtype.InvokeErr" title="type rsx_shared::traits::TCallback::InvokeErr">InvokeErr</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#135-141' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.call_mut' class="method"><span id='call_mut.v' class='invisible'><code>fn <a href='../../rsx_shared/traits/trait.TCallback.html#tymethod.call_mut' class='fnname'>call_mut</a>(&amp;mut self, args: A) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self::<a class="type" href="../../rsx_shared/traits/trait.TCallback.html#associatedtype.InvokeOk" title="type rsx_shared::traits::TCallback::InvokeOk">InvokeOk</a>, Self::<a class="type" href="../../rsx_shared/traits/trait.TCallback.html#associatedtype.InvokeErr" title="type rsx_shared::traits::TCallback::InvokeErr">InvokeErr</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#143-145' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.call_once' class="method"><span id='call_once.v' class='invisible'><code>fn <a href='../../rsx_shared/traits/trait.TCallback.html#tymethod.call_once' class='fnname'>call_once</a>(self, args: A) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self::<a class="type" href="../../rsx_shared/traits/trait.TCallback.html#associatedtype.InvokeOk" title="type rsx_shared::traits::TCallback::InvokeOk">InvokeOk</a>, Self::<a class="type" href="../../rsx_shared/traits/trait.TCallback.html#associatedtype.InvokeErr" title="type rsx_shared::traits::TCallback::InvokeErr">InvokeErr</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#147-149' title='goto source code'>[src]</a></span></h4>
+</div><h3 id='impl-Debug' class='impl'><span class='in-band'><code>impl&lt;A&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html" title="trait core::fmt::Debug">Debug</a> for <a class="enum" href="../../rsx_shared/types/enum.Closure.html" title="enum rsx_shared::types::Closure">Closure</a>&lt;A&gt;</code><a href='#impl-Debug' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#152-160' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class="method"><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>, <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Error.html" title="struct core::fmt::Error">Error</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#153-159' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter. <a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt">Read more</a></p>
+</div></div><h3 id='impl-PartialEq' class='impl'><span class='in-band'><code>impl&lt;A&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html" title="trait core::cmp::PartialEq">PartialEq</a> for <a class="enum" href="../../rsx_shared/types/enum.Closure.html" title="enum rsx_shared::types::Closure">Closure</a>&lt;A&gt;</code><a href='#impl-PartialEq' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#162-171' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class="method"><span id='eq.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, other: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#163-170' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class="method"><span id='ne.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Rhs) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/cmp.rs.html#121' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 id='impl-Clone' class='impl'><span class='in-band'><code>impl&lt;A&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a> for <a class="enum" href="../../rsx_shared/types/enum.Closure.html" title="enum rsx_shared::types::Closure">Closure</a>&lt;A&gt;</code><a href='#impl-Clone' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#173-181' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class="method"><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rsx_shared/types/event_types.rs.html#174-180' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class="method"><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self)</code></span><span class='out-of-band'><div class='ghost'></div><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/clone.rs.html#112-114' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div></div>
+            <h2 id='synthetic-implementations' class='small-section-header'>
+              Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+            </h2>
+            <div id='synthetic-implementations-list'>
+        <h3 id='impl-Send' class='impl'><span class='in-band'><code>impl&lt;A&gt; !<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="enum" href="../../rsx_shared/types/enum.Closure.html" title="enum rsx_shared::types::Closure">Closure</a>&lt;A&gt;</code><a href='#impl-Send' class='anchor'></a></span><span class='out-of-band'></span></h3>
+<div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><code>impl&lt;A&gt; !<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="enum" href="../../rsx_shared/types/enum.Closure.html" title="enum rsx_shared::types::Closure">Closure</a>&lt;A&gt;</code><a href='#impl-Sync' class='anchor'></a></span><span class='out-of-band'></span></h3>
+<div class='impl-items'></div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt><kbd>?</kbd></dt>
+                    <dd>Show this help dialog</dd>
+                    <dt><kbd>S</kbd></dt>
+                    <dd>Focus the search field</dd>
+                    <dt><kbd>↑</kbd></dt>
+                    <dd>Move up in search results</dd>
+                    <dt><kbd>↓</kbd></dt>
+                    <dd>Move down in search results</dd>
+                    <dt><kbd>↹</kbd></dt>
+                    <dd>Switch tab</dd>
+                    <dt><kbd>&#9166;</kbd></dt>
+                    <dd>Go to active search result</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "rsx_shared";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>
